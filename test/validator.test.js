@@ -1,5 +1,5 @@
 var createValidator = require('../')
-  , validity = require('validity')
+  , validity = require('@clocklimited/validity')
   , assert = require('assert')
 
 describe('validity-validate-if-property-set', function () {

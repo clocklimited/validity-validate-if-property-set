@@ -15,24 +15,22 @@ npm install validity-validate-if-property-set --save
 
 Below is a simple example for usage with schemata and save:
 
-``` js
-var validity = require('validity')
-  , schemata = require('schemata')
-  , save = require('save')
-  , collection = save('author')
-  , validateIfPropertySet = require('validity-validate-if-property-set')
+```js
+var validity = require("@clocklimited/validity"),
+  schemata = require("schemata"),
+  save = require("save"),
+  collection = save("author"),
+  validateIfPropertySet = require("@clocklimited/validity-validate-if-property-set");
 
-var schema = schemata(
-    { useLink:
-      { type: Boolean
-      }
-    , url:
-      { type: String
-      , validators: { all: [ validateIfPropertySet('useLink', validity.url) ] }
-      }
-    })
-
+var schema = schemata({
+  useLink: { type: Boolean },
+  url: {
+    type: String,
+    validators: { all: [validateIfPropertySet("useLink", validity.url)] },
+  },
+});
 ```
 
 ## Credits
+
 [Adam Duncan](https://github.com/microadam/)
